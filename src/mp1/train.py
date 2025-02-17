@@ -11,9 +11,9 @@ from utils.visualization import visualize_first_prediction
 from torch.optim import Adam
 
 # Configurations
-BATCH_SIZE = 
-LR = 
-EPOCHS = 
+BATCH_SIZE = 64 # might need to change
+LR = 1e-3
+EPOCHS = 10
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DATASET_PATH =  "/opt/data/TUSimple"
 CHECKPOINT_DIR = "checkpoints"
@@ -73,11 +73,11 @@ def train():
     # TODO: Data preparation: Load and preprocess the training and validation datasets.
     # Hint: Use the LaneDataset class and PyTorch's DataLoader.
     ################################################################################
-    # train_dataset = ...
-    # train_loader = DataLoader(...)
+    train_dataset = LaneDataset(DATASET_PATH, mode="train")
+    train_loader = DataLoader(train_dataset, BATCH_SIZE, shuffle=True)
 
-    # val_dataset = ...
-    # val_loader = DataLoader(...)
+    val_dataset = LaneDataset(DATASET_PATH, mode="val")
+    val_loader = DataLoader(val_dataset, BATCH_SIZE, shuffle=True)
     ################################################################################
 
     # Model and optimizer initialization
@@ -86,7 +86,7 @@ def train():
     
     # TODO: Initialize the Adam optimizer with appropriate learning rate and weight decay.
     ################################################################################
-    # optimizer = ...
+    optimizer = Adam(enet_model.parameters(), lr=LR, weight_decay=1e-4)
     
     ################################################################################
 
