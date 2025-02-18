@@ -142,8 +142,14 @@ def train():
 
             optimizer.zero_grad()
 
+            loss.backward()
 
+            optimizer.step()
 
+            # tracking losses
+            epoch_loss += loss.item()
+            binary_losses.append(binary_loss.item())
+            instance_losses.append(instance_loss.item())
 
 
             ################################################################################
@@ -182,7 +188,7 @@ def train():
         # Hint:
         # Call the `validate` function, passing the model and validation data loader.
         ################################################################################
-        # val_binary_loss, val_instance_loss, val_total_loss = ...
+        val_binary_loss, val_instance_loss, val_total_loss = validate(enet_model, val_loader)
         ################################################################################
         print(f"Validation Results - Epoch {epoch}: "
               f"Binary Loss = {val_binary_loss:.4f}, "
