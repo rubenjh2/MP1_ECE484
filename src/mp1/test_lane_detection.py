@@ -29,6 +29,25 @@ def perspective_transform(image):
     
     ####################### TODO: Your code starts Here #######################
 
+    height, width = image.shape[:2]
+
+    # want source points to cover a trapezoidal region
+    source_points = np.float32([[0, height], # top left
+                                [width, height], # top right
+                                [width // 2 + 100, height // 2], 
+                                [width // 2 - 100, height // 2]]) # might need to adjust these points
+
+    # want destination points to cover a rectangular region
+    destination_points = np.float32([[0, height], # top left
+                                     [width, height], # top right
+                                     [width, 0], # bottom right
+                                     [0, 0]]) # bottom left
+
+    transform = cv2.getPerspectiveTransform(source_points, destination_points)
+
+    transformed_image = cv2.warpPerspective(image, transform, (width, height))
+
+
     ####################### TODO: Your code ends Here #######################
     
     return transformed_image
