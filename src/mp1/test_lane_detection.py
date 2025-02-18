@@ -68,7 +68,21 @@ def visualize_lanes_row(images, instances_maps, alpha=0.7):
 
     ####################### TODO: Your code starts Here #######################
     
+    for i in range(num_images):
+        
+        # resize the image to 512 x 256
+        image_resized = cv2.resize(images[i], (512, 256))
 
+        # apply perspective transform to both the original image and its instance map
+        image_transformed = perspective_transform(image_resized)
+        instance_map_transformed = perspective_transform(instances_maps[i])
+
+        # overlay the instance map to a plot with the corresponding original image using a specified alpha value
+        overlay = cv2.addWeighted(image_transformed, alpha, instance_map_transformed, 1 - alpha, 0) # alpha is transparency factor
+
+
+        axes[i].imshow(overlay)
+        axes[i].axis('off')
 
 
 
