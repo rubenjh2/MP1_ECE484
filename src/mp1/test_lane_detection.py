@@ -68,6 +68,10 @@ def visualize_lanes_row(images, instances_maps, alpha=0.7):
 
     ####################### TODO: Your code starts Here #######################
     
+
+
+
+
     ####################### TODO: Your code ends Here #######################
 
     plt.tight_layout()
