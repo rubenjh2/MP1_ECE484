@@ -10,14 +10,17 @@ from models.losses import compute_loss
 from utils.visualization import visualize_first_prediction
 from torch.optim import Adam
 
+
 # Configurations
-BATCH_SIZE = 64 # might need to change
+BATCH_SIZE = 8 # might need to change
 LR = 1e-3
-EPOCHS = 10
+EPOCHS = 6
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DATASET_PATH =  "/opt/data/TUSimple"
 CHECKPOINT_DIR = "checkpoints"
 os.makedirs(CHECKPOINT_DIR, exist_ok=True)
+
+
 
 def validate(model, val_loader):
     """
@@ -74,10 +77,10 @@ def train():
     # Hint: Use the LaneDataset class and PyTorch's DataLoader.
     ################################################################################
     train_dataset = LaneDataset(DATASET_PATH, mode="train")
-    train_loader = DataLoader(train_dataset, BATCH_SIZE, shuffle=True, num_workers=8, pin_memory=True)
+    train_loader = DataLoader(train_dataset, BATCH_SIZE, shuffle=True, num_workers=4, pin_memory=True)
 
     val_dataset = LaneDataset(DATASET_PATH, mode="val")
-    val_loader = DataLoader(val_dataset, BATCH_SIZE, shuffle=True, num_workers=8, pin_memory=True)
+    val_loader = DataLoader(val_dataset, BATCH_SIZE, shuffle=True, num_workers=4, pin_memory=True)
     ################################################################################
 
     # Model and optimizer initialization
@@ -188,7 +191,9 @@ def train():
         # Hint:
         # Call the `validate` function, passing the model and validation data loader.
         ################################################################################
+
         val_binary_loss, val_instance_loss, val_total_loss = validate(enet_model, val_loader)
+        
         ################################################################################
         print(f"Validation Results - Epoch {epoch}: "
               f"Binary Loss = {val_binary_loss:.4f}, "

@@ -1,0 +1,15 @@
+Epoch 1/6:  50%|██████████████████████████████████████████████████████████████████▉                                                                  | 135/268 [00:57<00:56,  2.35it/s]
+Traceback (most recent call last):
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 213, in <module>
+    train()
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 133, in train
+    binary_loss, instance_loss = compute_loss(
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/models/losses.py", line 69, in compute_loss
+    instance_loss = ds_loss(instance_output, instance_label)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/models/losses.py", line 23, in forward
+    return self._discriminative_loss(input, target)
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/models/losses.py", line 43, in _discriminative_loss
+    indices=(sample_label==vals[j]).nonzero()
+KeyboardInterrupt

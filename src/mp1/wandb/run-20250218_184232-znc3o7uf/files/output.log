@@ -1,0 +1,21 @@
+Epoch 1/8:   0%|                                                                                                                                               | 0/201 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 211, in <module>
+    train()
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 127, in train
+    binary_logits, instance_embeddings = enet_model(images)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/models/enet.py", line 450, in forward
+    x_binary = self.upsample_binary_5_0(x_binary, max_indices1_0, output_size=stage1_input_size)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/models/enet.py", line 338, in forward
+    return self.out_activation(out)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 103, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/functional.py", line 1457, in relu
+    result = torch.relu(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 0; 4.93 GiB total capacity; 3.82 GiB already allocated; 69.75 MiB free; 3.85 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

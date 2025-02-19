@@ -8,7 +8,7 @@ import os
 
 # Define dataset and checkpoint paths
 DATASET_PATH = "/opt/data/TUSimple/test_set"
-CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_best.pth"  # Path to the trained model checkpoint
+CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_6.pth"  # Path to the trained model checkpoint
 
 # Function to load the ENet model
 def load_enet_model(checkpoint_path, device="cuda"):
@@ -73,12 +73,21 @@ def visualize_lanes_row(images, instances_maps, alpha=0.7):
         # resize the image to 512 x 256
         image_resized = cv2.resize(images[i], (512, 256))
 
+
         # apply perspective transform to both the original image and its instance map
         image_transformed = perspective_transform(image_resized)
-        instance_map_transformed = perspective_transform(instances_maps[i])
+        instance_map_transformed_uint8 = perspective_transform(instances_maps[i])
+
+        # to change instance_map_transformed to uint8 from float32 to match types
+        instance_map_transformed = (instance_map_transformed_uint8 * 255).astype(np.uint8)
+
+        print(type(image_transformed), image_transformed.dtype)
+
+        print(type(instance_map_transformed), instance_map_transformed.dtype)
+
 
         # overlay the instance map to a plot with the corresponding original image using a specified alpha value
-        overlay = cv2.addWeighted(image_transformed, alpha, instance_map_transformed, 1 - alpha, 0) # alpha is transparency factor
+        overlay = cv2.addWeighted(instance_map_transformed, 1 - alpha, image_transformed, alpha, 0) # alpha is transparency factor
 
 
         axes[i].imshow(overlay)

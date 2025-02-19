@@ -1,0 +1,15 @@
+{"time":"2025-02-18T19:00:58.627026428-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/wandb/run-20250218_190058-qyrzow85/logs/debug-core.log"}
+{"time":"2025-02-18T19:00:58.732884144-06:00","level":"INFO","msg":"created new stream","id":"qyrzow85"}
+{"time":"2025-02-18T19:00:58.732991551-06:00","level":"INFO","msg":"stream: started","id":"qyrzow85"}
+{"time":"2025-02-18T19:00:58.733117988-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"qyrzow85"}
+{"time":"2025-02-18T19:00:58.733168177-06:00","level":"INFO","msg":"handler: started","stream_id":"qyrzow85"}
+{"time":"2025-02-18T19:00:58.733237366-06:00","level":"INFO","msg":"sender: started","stream_id":"qyrzow85"}
+{"time":"2025-02-18T19:00:58.926472831-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-18T19:01:00.400263078-06:00","level":"INFO","msg":"stream: closing","id":"qyrzow85"}
+{"time":"2025-02-18T19:01:00.400281263-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-18T19:01:00.400650446-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-18T19:01:00.659228075-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-18T19:01:00.748087273-06:00","level":"INFO","msg":"handler: closed","stream_id":"qyrzow85"}
+{"time":"2025-02-18T19:01:00.748165867-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qyrzow85"}
+{"time":"2025-02-18T19:01:00.748178405-06:00","level":"INFO","msg":"sender: closed","stream_id":"qyrzow85"}
+{"time":"2025-02-18T19:01:00.748479981-06:00","level":"INFO","msg":"stream: closed","id":"qyrzow85"}

@@ -1,0 +1,21 @@
+Epoch 1/8:   0%|                                                                                                                                               | 0/101 [00:03<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 211, in <module>
+    train()
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 127, in train
+    binary_logits, instance_embeddings = enet_model(images)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/models/enet.py", line 428, in forward
+    x_binary = self.dilated_binary_3_1(x_binary)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/models/enet.py", line 146, in forward
+    ext = self.ext_regul(ext)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/modules/dropout.py", line 150, in forward
+    return F.dropout2d(input, self.p, self.training, self.inplace)
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/site-packages/torch/nn/functional.py", line 1344, in dropout2d
+    result = _VF.feature_dropout_(input, p, training) if inplace else _VF.feature_dropout(input, p, training)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 32.00 MiB (GPU 0; 4.93 GiB total capacity; 3.83 GiB already allocated; 45.81 MiB free; 3.88 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

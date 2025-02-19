@@ -1,0 +1,15 @@
+{"time":"2025-02-18T18:41:18.556291675-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/wandb/run-20250218_184118-qulghtxs/logs/debug-core.log"}
+{"time":"2025-02-18T18:41:18.660733102-06:00","level":"INFO","msg":"created new stream","id":"qulghtxs"}
+{"time":"2025-02-18T18:41:18.660776265-06:00","level":"INFO","msg":"stream: started","id":"qulghtxs"}
+{"time":"2025-02-18T18:41:18.660868732-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"qulghtxs"}
+{"time":"2025-02-18T18:41:18.660882018-06:00","level":"INFO","msg":"handler: started","stream_id":"qulghtxs"}
+{"time":"2025-02-18T18:41:18.660867168-06:00","level":"INFO","msg":"sender: started","stream_id":"qulghtxs"}
+{"time":"2025-02-18T18:41:18.83794392-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-18T18:41:20.442980742-06:00","level":"INFO","msg":"stream: closing","id":"qulghtxs"}
+{"time":"2025-02-18T18:41:20.442997414-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-18T18:41:20.44329002-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-18T18:41:20.685696706-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-18T18:41:20.784695995-06:00","level":"INFO","msg":"handler: closed","stream_id":"qulghtxs"}
+{"time":"2025-02-18T18:41:20.78477476-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"qulghtxs"}
+{"time":"2025-02-18T18:41:20.784812095-06:00","level":"INFO","msg":"sender: closed","stream_id":"qulghtxs"}
+{"time":"2025-02-18T18:41:20.785200416-06:00","level":"INFO","msg":"stream: closed","id":"qulghtxs"}

@@ -1,0 +1,12 @@
+Epoch 1/6:  10%|█████████████▋                                                                                                                        | 41/402 [00:12<01:48,  3.34it/s]
+Traceback (most recent call last):
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 213, in <module>
+    train()
+Traceback (most recent call last):
+  File "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/train.py", line 152, in train
+    epoch_loss += loss.item()
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/multiprocessing/queues.py", line 245, in _feed
+    send_bytes(obj)
+KeyboardInterrupt
+  File "/home/rubenjh2/.conda/envs/tusimple/lib/python3.8/multiprocessing/connection.py", line 200, in send_bytes
+    self._send_bytes(m[offset:offset + size])

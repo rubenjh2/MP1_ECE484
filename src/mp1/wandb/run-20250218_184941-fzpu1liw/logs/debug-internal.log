@@ -1,0 +1,15 @@
+{"time":"2025-02-18T18:49:41.892595414-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/wandb/run-20250218_184941-fzpu1liw/logs/debug-core.log"}
+{"time":"2025-02-18T18:49:41.998445874-06:00","level":"INFO","msg":"created new stream","id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:41.998554175-06:00","level":"INFO","msg":"stream: started","id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:41.998603686-06:00","level":"INFO","msg":"handler: started","stream_id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:41.998586285-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:41.99868983-06:00","level":"INFO","msg":"sender: started","stream_id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:42.217938571-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-18T18:49:42.992497968-06:00","level":"INFO","msg":"stream: closing","id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:42.992515109-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-18T18:49:42.994102917-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-18T18:49:43.240628286-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-18T18:49:43.320380926-06:00","level":"INFO","msg":"handler: closed","stream_id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:43.320476326-06:00","level":"INFO","msg":"sender: closed","stream_id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:43.320445047-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fzpu1liw"}
+{"time":"2025-02-18T18:49:43.320862379-06:00","level":"INFO","msg":"stream: closed","id":"fzpu1liw"}

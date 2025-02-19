@@ -1,0 +1,15 @@
+{"time":"2025-02-18T18:53:23.30286275-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/wandb/run-20250218_185322-uuh28057/logs/debug-core.log"}
+{"time":"2025-02-18T18:53:23.408185758-06:00","level":"INFO","msg":"created new stream","id":"uuh28057"}
+{"time":"2025-02-18T18:53:23.408262098-06:00","level":"INFO","msg":"stream: started","id":"uuh28057"}
+{"time":"2025-02-18T18:53:23.408340781-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"uuh28057"}
+{"time":"2025-02-18T18:53:23.408342761-06:00","level":"INFO","msg":"handler: started","stream_id":"uuh28057"}
+{"time":"2025-02-18T18:53:23.408455051-06:00","level":"INFO","msg":"sender: started","stream_id":"uuh28057"}
+{"time":"2025-02-18T18:53:23.603315499-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-18T18:55:47.787724493-06:00","level":"INFO","msg":"stream: closing","id":"uuh28057"}
+{"time":"2025-02-18T18:55:47.78774007-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-18T18:55:47.788050945-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-18T18:55:49.047962734-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-18T18:55:49.126622171-06:00","level":"INFO","msg":"handler: closed","stream_id":"uuh28057"}
+{"time":"2025-02-18T18:55:49.126717146-06:00","level":"INFO","msg":"sender: closed","stream_id":"uuh28057"}
+{"time":"2025-02-18T18:55:49.126707703-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"uuh28057"}
+{"time":"2025-02-18T18:55:49.127023417-06:00","level":"INFO","msg":"stream: closed","id":"uuh28057"}

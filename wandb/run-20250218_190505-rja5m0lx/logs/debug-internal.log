@@ -1,0 +1,16 @@
+{"time":"2025-02-18T19:05:06.304629403-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/wandb/run-20250218_190505-rja5m0lx/logs/debug-core.log"}
+{"time":"2025-02-18T19:05:06.409857-06:00","level":"INFO","msg":"created new stream","id":"rja5m0lx"}
+{"time":"2025-02-18T19:05:06.409927146-06:00","level":"INFO","msg":"stream: started","id":"rja5m0lx"}
+{"time":"2025-02-18T19:05:06.410029309-06:00","level":"INFO","msg":"handler: started","stream_id":"rja5m0lx"}
+{"time":"2025-02-18T19:05:06.40997731-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"rja5m0lx"}
+{"time":"2025-02-18T19:05:06.410137266-06:00","level":"INFO","msg":"sender: started","stream_id":"rja5m0lx"}
+{"time":"2025-02-18T19:05:06.565982843-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-18T19:16:42.049176225-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-18T19:16:42.04954402-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-18T19:16:43.050098939-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading checkpoints/enet_checkpoint_epoch_6.pth","runtime_seconds":0.526765767,"progress":"5.6MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_1.pth","runtime_seconds":0.526753059,"progress":"5.7MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_2.pth","runtime_seconds":0.526748376,"progress":"6.0MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_3.pth","runtime_seconds":0.526744968,"progress":"6.4MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_4.pth","runtime_seconds":0.526740841,"progress":"5.8MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_5.pth","runtime_seconds":0.52673542,"progress":"5.6MB/6.8MB"}],"total_operations":6}}
+{"time":"2025-02-18T19:16:43.378838256-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-18T19:16:44.499265617-06:00","level":"INFO","msg":"stream: closing","id":"rja5m0lx"}
+{"time":"2025-02-18T19:16:44.49932377-06:00","level":"INFO","msg":"handler: closed","stream_id":"rja5m0lx"}
+{"time":"2025-02-18T19:16:44.499365891-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"rja5m0lx"}
+{"time":"2025-02-18T19:16:44.499487671-06:00","level":"INFO","msg":"sender: closed","stream_id":"rja5m0lx"}
+{"time":"2025-02-18T19:16:44.499773164-06:00","level":"INFO","msg":"stream: closed","id":"rja5m0lx"}

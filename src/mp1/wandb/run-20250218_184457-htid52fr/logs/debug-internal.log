@@ -1,0 +1,15 @@
+{"time":"2025-02-18T18:44:58.179127475-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/wandb/run-20250218_184457-htid52fr/logs/debug-core.log"}
+{"time":"2025-02-18T18:44:58.28576522-06:00","level":"INFO","msg":"created new stream","id":"htid52fr"}
+{"time":"2025-02-18T18:44:58.285846601-06:00","level":"INFO","msg":"stream: started","id":"htid52fr"}
+{"time":"2025-02-18T18:44:58.286017211-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"htid52fr"}
+{"time":"2025-02-18T18:44:58.286014198-06:00","level":"INFO","msg":"handler: started","stream_id":"htid52fr"}
+{"time":"2025-02-18T18:44:58.28602578-06:00","level":"INFO","msg":"sender: started","stream_id":"htid52fr"}
+{"time":"2025-02-18T18:44:58.469645062-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-18T18:45:02.088166126-06:00","level":"INFO","msg":"stream: closing","id":"htid52fr"}
+{"time":"2025-02-18T18:45:02.08818239-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-18T18:45:02.088506749-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-18T18:45:02.394177227-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-18T18:45:02.494645942-06:00","level":"INFO","msg":"handler: closed","stream_id":"htid52fr"}
+{"time":"2025-02-18T18:45:02.494721805-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"htid52fr"}
+{"time":"2025-02-18T18:45:02.494734779-06:00","level":"INFO","msg":"sender: closed","stream_id":"htid52fr"}
+{"time":"2025-02-18T18:45:02.495056225-06:00","level":"INFO","msg":"stream: closed","id":"htid52fr"}

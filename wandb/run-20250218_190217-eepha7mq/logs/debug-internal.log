@@ -1,0 +1,15 @@
+{"time":"2025-02-18T19:02:17.353303374-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/wandb/run-20250218_190217-eepha7mq/logs/debug-core.log"}
+{"time":"2025-02-18T19:02:17.459947938-06:00","level":"INFO","msg":"created new stream","id":"eepha7mq"}
+{"time":"2025-02-18T19:02:17.460055951-06:00","level":"INFO","msg":"stream: started","id":"eepha7mq"}
+{"time":"2025-02-18T19:02:17.460087431-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"eepha7mq"}
+{"time":"2025-02-18T19:02:17.460126726-06:00","level":"INFO","msg":"handler: started","stream_id":"eepha7mq"}
+{"time":"2025-02-18T19:02:17.460280544-06:00","level":"INFO","msg":"sender: started","stream_id":"eepha7mq"}
+{"time":"2025-02-18T19:02:17.642584295-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-18T19:02:18.993474895-06:00","level":"INFO","msg":"stream: closing","id":"eepha7mq"}
+{"time":"2025-02-18T19:02:18.993496581-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-18T19:02:18.993822378-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-18T19:02:19.236143681-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-18T19:02:19.332786967-06:00","level":"INFO","msg":"handler: closed","stream_id":"eepha7mq"}
+{"time":"2025-02-18T19:02:19.332848916-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"eepha7mq"}
+{"time":"2025-02-18T19:02:19.332860582-06:00","level":"INFO","msg":"sender: closed","stream_id":"eepha7mq"}
+{"time":"2025-02-18T19:02:19.333091611-06:00","level":"INFO","msg":"stream: closed","id":"eepha7mq"}
