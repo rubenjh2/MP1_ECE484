@@ -8,7 +8,7 @@ import os
 
 # Define dataset and checkpoint paths
 DATASET_PATH = "/opt/data/TUSimple/test_set"
-CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_6.pth"  # Path to the trained model checkpoint
+CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_20.pth"  # Path to the trained model checkpoint
 
 # Function to load the ENet model
 def load_enet_model(checkpoint_path, device="cuda"):
@@ -54,7 +54,7 @@ def perspective_transform(image):
 
 
 # Function to visualize lane predictions for multiple images in a single row
-def visualize_lanes_row(images, instances_maps, alpha=0.5):
+def visualize_lanes_row(images, instances_maps, alpha=0.4):
     """
     Visualize lane predictions for multiple images in a single row
     For each image:
@@ -84,9 +84,6 @@ def visualize_lanes_row(images, instances_maps, alpha=0.5):
         axes[i].imshow(image_resized)
         axes[i].imshow(instances_maps[i], alpha=alpha)
 
-
-    for i in range(num_images):
-
         # apply perspective transform to both the original image and its instance map
         image_transformed = perspective_transform(image_resized)
         instance_map_transformed = perspective_transform(instances_maps[i])
@@ -96,6 +93,19 @@ def visualize_lanes_row(images, instances_maps, alpha=0.5):
 
 
         axes[i].axis('off')
+
+
+    # for i in range(num_images):
+
+    #     # apply perspective transform to both the original image and its instance map
+    #     image_transformed = perspective_transform(image_resized)
+    #     instance_map_transformed = perspective_transform(instances_maps[i])
+
+    #     axes[num_images+i].imshow(image_transformed)
+    #     axes[num_images+i].imshow(instance_map_transformed, alpha=alpha)
+
+
+    #     axes[i].axis('off')
 
 
         # image_transformed = perspective_transform(image_resized)

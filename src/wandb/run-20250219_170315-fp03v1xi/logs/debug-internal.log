@@ -1,0 +1,16 @@
+{"time":"2025-02-19T17:03:16.20639496-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.6","symlink path":"/home/rubenjh2/Desktop/mp-release-sp25/src/wandb/run-20250219_170315-fp03v1xi/logs/debug-core.log"}
+{"time":"2025-02-19T17:03:16.312518283-06:00","level":"INFO","msg":"created new stream","id":"fp03v1xi"}
+{"time":"2025-02-19T17:03:16.312594241-06:00","level":"INFO","msg":"stream: started","id":"fp03v1xi"}
+{"time":"2025-02-19T17:03:16.312636625-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"fp03v1xi"}
+{"time":"2025-02-19T17:03:16.312743959-06:00","level":"INFO","msg":"sender: started","stream_id":"fp03v1xi"}
+{"time":"2025-02-19T17:03:16.312684485-06:00","level":"INFO","msg":"handler: started","stream_id":"fp03v1xi"}
+{"time":"2025-02-19T17:03:16.57184591-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-19T17:32:15.725876729-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-19T17:32:15.726199213-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-19T17:32:16.726643997-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading checkpoints/enet_checkpoint_epoch_10.pth","runtime_seconds":0.434075521,"progress":"3.1MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_11.pth","runtime_seconds":0.434065133,"progress":"3.0MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_15.pth","runtime_seconds":0.434062632,"progress":"3.0MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_8.pth","runtime_seconds":0.434060681,"progress":"2.9MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_13.pth","runtime_seconds":0.434058552,"progress":"2.8MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_7.pth","runtime_seconds":0.434056297,"progress":"2.8MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_5.pth","runtime_seconds":0.434052359,"progress":"2.9MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_12.pth","runtime_seconds":0.434049764,"progress":"3.4MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_2.pth","runtime_seconds":0.434047547,"progress":"3.1MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_3.pth","runtime_seconds":0.434045655,"progress":"2.6MB/6.8MB"}],"total_operations":15}}
+{"time":"2025-02-19T17:32:17.545595689-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-19T17:32:18.620769432-06:00","level":"INFO","msg":"stream: closing","id":"fp03v1xi"}
+{"time":"2025-02-19T17:32:18.620829182-06:00","level":"INFO","msg":"handler: closed","stream_id":"fp03v1xi"}
+{"time":"2025-02-19T17:32:18.620862936-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"fp03v1xi"}
+{"time":"2025-02-19T17:32:18.620909422-06:00","level":"INFO","msg":"sender: closed","stream_id":"fp03v1xi"}
+{"time":"2025-02-19T17:32:18.621284179-06:00","level":"INFO","msg":"stream: closed","id":"fp03v1xi"}

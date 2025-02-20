@@ -13,8 +13,8 @@ from torch.optim import Adam
 
 # Configurations
 BATCH_SIZE = 8 # might need to change
-LR = 1e-3
-EPOCHS = 6
+LR = 1e-4
+EPOCHS = 20
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DATASET_PATH =  "/opt/data/TUSimple"
 CHECKPOINT_DIR = "checkpoints"
@@ -89,7 +89,7 @@ def train():
     
     # TODO: Initialize the Adam optimizer with appropriate learning rate and weight decay.
     ################################################################################
-    optimizer = Adam(enet_model.parameters(), lr=LR, weight_decay=1e-4)
+    optimizer = Adam(enet_model.parameters(), lr=LR, weight_decay=1e-3) # changed weight decay from 1e-4 to 1e-3
     
     ################################################################################
 
