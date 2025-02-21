@@ -1,0 +1,16 @@
+{"time":"2025-02-21T00:03:02.019149289-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/home/rubenjh2/Desktop/MP1_ECE484/src/wandb/run-20250221_000301-lnco279d/logs/debug-core.log"}
+{"time":"2025-02-21T00:03:02.125413971-06:00","level":"INFO","msg":"created new stream","id":"lnco279d"}
+{"time":"2025-02-21T00:03:02.125551285-06:00","level":"INFO","msg":"stream: started","id":"lnco279d"}
+{"time":"2025-02-21T00:03:02.125685587-06:00","level":"INFO","msg":"handler: started","stream_id":"lnco279d"}
+{"time":"2025-02-21T00:03:02.125647341-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"lnco279d"}
+{"time":"2025-02-21T00:03:02.125882018-06:00","level":"INFO","msg":"sender: started","stream_id":"lnco279d"}
+{"time":"2025-02-21T00:03:02.279647338-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-21T00:22:10.850184333-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-21T00:22:10.850516987-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-21T00:22:11.854889813-06:00","level":"INFO","msg":"handler: operation stats","stats":{"operations":[{"desc":"uploading checkpoints/enet_checkpoint_epoch_7.pth","runtime_seconds":0.320744274,"progress":"3.6MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_10.pth","runtime_seconds":0.320726184,"progress":"3.1MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_3.pth","runtime_seconds":0.320720076,"progress":"3.3MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_4.pth","runtime_seconds":0.320713176,"progress":"3.0MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_5.pth","runtime_seconds":0.320707758,"progress":"3.1MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_1.pth","runtime_seconds":0.320700196,"progress":"3.1MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_9.pth","runtime_seconds":0.320701398,"progress":"3.2MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_2.pth","runtime_seconds":0.320696631,"progress":"3.0MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_6.pth","runtime_seconds":0.320690984,"progress":"3.2MB/6.8MB"},{"desc":"uploading checkpoints/enet_checkpoint_epoch_8.pth","runtime_seconds":0.320686304,"progress":"3.2MB/6.8MB"}],"total_operations":10}}
+{"time":"2025-02-21T00:22:12.404545267-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-21T00:22:13.51237796-06:00","level":"INFO","msg":"stream: closing","id":"lnco279d"}
+{"time":"2025-02-21T00:22:13.512410445-06:00","level":"INFO","msg":"handler: closed","stream_id":"lnco279d"}
+{"time":"2025-02-21T00:22:13.512428243-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lnco279d"}
+{"time":"2025-02-21T00:22:13.512470546-06:00","level":"INFO","msg":"sender: closed","stream_id":"lnco279d"}
+{"time":"2025-02-21T00:22:13.512617382-06:00","level":"INFO","msg":"stream: closed","id":"lnco279d"}

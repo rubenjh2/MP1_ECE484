@@ -1,0 +1,5 @@
+Checkpoint successfully loaded from checkpoints/enet_checkpoint_epoch_22.pth (Epoch 22)
+Evaluation Results:
+  - Binary Loss:   0.0425
+  - Instance Loss: nan
+  - Total Loss:    nan

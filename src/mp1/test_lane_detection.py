@@ -8,7 +8,7 @@ import os
 
 # Define dataset and checkpoint paths
 DATASET_PATH = "/opt/data/TUSimple/test_set"
-CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_20.pth"  # Path to the trained model checkpoint
+CHECKPOINT_PATH = "checkpoints/enet_checkpoint_epoch_10.pth"  # Path to the trained model checkpoint
 
 # Function to load the ENet model
 def load_enet_model(checkpoint_path, device="cuda"):
@@ -32,10 +32,10 @@ def perspective_transform(image):
     height, width = image.shape[:2]
 
     # want source points to cover a trapezoidal region
-    source_points = np.float32([[0, height], # top left
-                                [width, height], # top right
+    source_points = np.float32([[0, height], # bottom right
+                                [width, height], # bottom left
                                 [width // 2 + 100, height // 2], 
-                                [width // 2 - 100, height // 2]]) # might need to adjust these points
+                                [width // 2 - 100, height // 2]])
 
     # want destination points to cover a rectangular region
     destination_points = np.float32([[0, height], # top left

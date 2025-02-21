@@ -1,0 +1,30 @@
+2025-02-20 23:59:35,523 INFO    MainThread:378091 [wandb_setup.py:_flush():67] Current SDK version is 0.19.7
+2025-02-20 23:59:35,523 INFO    MainThread:378091 [wandb_setup.py:_flush():67] Configure stats pid to 378091
+2025-02-20 23:59:35,523 INFO    MainThread:378091 [wandb_setup.py:_flush():67] Loading settings from /home/rubenjh2/.config/wandb/settings
+2025-02-20 23:59:35,523 INFO    MainThread:378091 [wandb_setup.py:_flush():67] Loading settings from /home/rubenjh2/Desktop/MP1_ECE484/src/wandb/settings
+2025-02-20 23:59:35,524 INFO    MainThread:378091 [wandb_setup.py:_flush():67] Loading settings from environment variables
+2025-02-20 23:59:35,524 INFO    MainThread:378091 [wandb_init.py:setup_run_log_directory():647] Logging user logs to /home/rubenjh2/Desktop/MP1_ECE484/src/wandb/run-20250220_235935-1kfx4h6z/logs/debug.log
+2025-02-20 23:59:35,524 INFO    MainThread:378091 [wandb_init.py:setup_run_log_directory():648] Logging internal logs to /home/rubenjh2/Desktop/MP1_ECE484/src/wandb/run-20250220_235935-1kfx4h6z/logs/debug-internal.log
+2025-02-20 23:59:35,524 INFO    MainThread:378091 [wandb_init.py:init():761] calling init triggers
+2025-02-20 23:59:35,524 INFO    MainThread:378091 [wandb_init.py:init():766] wandb.init called with sweep_config: {}
+config: {'batch_size': 10, 'checkpoint_path': 'checkpoints/enet_checkpoint_epoch_10.pth', 'dataset_path': '/opt/data/TUSimple', '_wandb': {}}
+2025-02-20 23:59:35,525 INFO    MainThread:378091 [wandb_init.py:init():784] starting backend
+2025-02-20 23:59:35,525 INFO    MainThread:378091 [wandb_init.py:init():788] sending inform_init request
+2025-02-20 23:59:35,584 INFO    MainThread:378091 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-02-20 23:59:35,584 INFO    MainThread:378091 [wandb_init.py:init():803] backend started and connected
+2025-02-20 23:59:35,586 INFO    MainThread:378091 [wandb_init.py:init():896] updated telemetry
+2025-02-20 23:59:35,603 INFO    MainThread:378091 [wandb_init.py:init():920] communicating run to backend with 90.0 second timeout
+2025-02-20 23:59:35,839 INFO    MainThread:378091 [wandb_init.py:init():995] starting run threads in backend
+2025-02-20 23:59:35,928 INFO    MainThread:378091 [wandb_run.py:_console_start():2377] atexit reg
+2025-02-20 23:59:35,928 INFO    MainThread:378091 [wandb_run.py:_redirect():2227] redirect: wrap_raw
+2025-02-20 23:59:35,929 INFO    MainThread:378091 [wandb_run.py:_redirect():2292] Wrapping output streams.
+2025-02-20 23:59:35,929 INFO    MainThread:378091 [wandb_run.py:_redirect():2317] Redirects installed.
+2025-02-20 23:59:35,930 INFO    MainThread:378091 [wandb_init.py:init():1037] run started, returning control to user process
+2025-02-20 23:59:36,795 INFO    MainThread:378091 [wandb_run.py:_finish():2112] finishing run rubenjh2-university-of-illinois-urbana-champaign/lane-detection/1kfx4h6z
+2025-02-20 23:59:36,795 INFO    MainThread:378091 [wandb_run.py:_atexit_cleanup():2342] got exitcode: 0
+2025-02-20 23:59:36,795 INFO    MainThread:378091 [wandb_run.py:_restore():2324] restore
+2025-02-20 23:59:36,795 INFO    MainThread:378091 [wandb_run.py:_restore():2330] restore done
+2025-02-20 23:59:38,172 INFO    MsgRouterThr:378091 [mailbox.py:close():115] Closing mailbox, abandoning 1 handles.
+2025-02-20 23:59:38,173 INFO    MainThread:378091 [wandb_run.py:_footer_history_summary_info():3958] rendering history
+2025-02-20 23:59:38,174 INFO    MainThread:378091 [wandb_run.py:_footer_history_summary_info():3990] rendering summary
+2025-02-20 23:59:38,174 INFO    MainThread:378091 [wandb_run.py:_footer_sync_info():3919] logging synced files

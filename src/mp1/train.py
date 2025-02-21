@@ -13,8 +13,9 @@ from torch.optim import Adam
 
 # Configurations
 BATCH_SIZE = 8 # might need to change
+
 LR = 1e-4
-EPOCHS = 20
+EPOCHS = 10
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 DATASET_PATH =  "/opt/data/TUSimple"
 CHECKPOINT_DIR = "checkpoints"
@@ -139,7 +140,7 @@ def train():
             )
             # 4. Sum the losses (`loss = binary_loss + instance_loss`) for backpropagation.
 
-            loss = binary_loss + instance_loss
+            loss = 0.5 * binary_loss + 0.5 * instance_loss
 
             # 5. Zero out the optimizer gradients, backpropagate the loss, and take an optimizer step.
 

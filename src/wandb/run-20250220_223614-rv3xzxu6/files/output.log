@@ -1,0 +1,5 @@
+Checkpoint successfully loaded from checkpoints/enet_checkpoint_epoch_26.pth (Epoch 26)
+Evaluation Results:
+  - Binary Loss:   0.0416
+  - Instance Loss: nan
+  - Total Loss:    nan

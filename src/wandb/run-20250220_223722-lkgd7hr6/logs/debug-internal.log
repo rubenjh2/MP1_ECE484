@@ -1,0 +1,16 @@
+{"time":"2025-02-20T22:37:22.571749141-06:00","level":"INFO","msg":"stream: starting","core version":"0.19.7","symlink path":"/home/rubenjh2/Desktop/MP1_ECE484/src/wandb/run-20250220_223722-lkgd7hr6/logs/debug-core.log"}
+{"time":"2025-02-20T22:37:22.675595079-06:00","level":"INFO","msg":"created new stream","id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:22.675614172-06:00","level":"INFO","msg":"stream: started","id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:22.675672006-06:00","level":"INFO","msg":"writer: Do: started","stream_id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:22.675685025-06:00","level":"INFO","msg":"sender: started","stream_id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:22.675696496-06:00","level":"INFO","msg":"handler: started","stream_id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:22.820408595-06:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-02-20T22:37:23.819582678-06:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-02-20T22:37:23.819886045-06:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-02-20T22:37:24.077805316-06:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-02-20T22:37:24.189457145-06:00","level":"INFO","msg":"handler: operation stats","stats":{}}
+{"time":"2025-02-20T22:37:25.201319147-06:00","level":"INFO","msg":"stream: closing","id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:25.201391134-06:00","level":"INFO","msg":"handler: closed","stream_id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:25.201445111-06:00","level":"INFO","msg":"sender: closed","stream_id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:25.201440362-06:00","level":"INFO","msg":"writer: Close: closed","stream_id":"lkgd7hr6"}
+{"time":"2025-02-20T22:37:25.202063064-06:00","level":"INFO","msg":"stream: closed","id":"lkgd7hr6"}
