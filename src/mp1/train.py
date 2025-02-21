@@ -140,7 +140,7 @@ def train():
             )
             # 4. Sum the losses (`loss = binary_loss + instance_loss`) for backpropagation.
 
-            loss = 0.5 * binary_loss + 0.5 * instance_loss
+            loss = binary_loss + instance_loss
 
             # 5. Zero out the optimizer gradients, backpropagate the loss, and take an optimizer step.
 
