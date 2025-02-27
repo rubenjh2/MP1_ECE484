@@ -40,7 +40,18 @@ class vehicleController():
     def extract_vehicle_info(self, currentPose):
 
         ####################### TODO: Your TASK 1 code starts Here #######################
-        pos_x, pos_y, vel, yaw = 0, 0, 0, 0
+      
+        pos_x = currentPose.pose.position.x
+        pos_y = currentPose.pose.position.y
+
+        vel_x = currentPose.twist.linear.x
+        vel_y = currentPose.twist.linear.y
+
+        vel = np.sqrt(vel_x**2 + vel_y**2)
+
+        orientation_quaternion = currentPose.pose.orientation
+
+        _, _, yaw = quaternion_to_euler(orientation_quaternion.x, orientation_quaternion.y, orientation_quaternion.z, orientation_quaternion.w)
 
         ####################### TODO: Your Task 1 code ends Here #######################
 
@@ -51,7 +62,35 @@ class vehicleController():
     def longititudal_controller(self, curr_x, curr_y, curr_vel, curr_yaw, future_unreached_waypoints):
 
         ####################### TODO: Your TASK 2 code starts Here #######################
-        target_velocity = 10
+        # target_velocity = 10
+
+        # get location components of next target
+        target_x, target_y = future_unreached_waypoints[0] # consider changing this so skip one waypoint if straight
+
+        # get combined location of next target
+        target_location = np.sqrt(target_x**2 + target_y**2)
+
+        # get current position
+        curr_pos = np.sqrt(curr_x**2 + curr_y**2)
+
+        # get distance from car to next waypoint
+        d_to_waypoint = target_location - curr_pos
+
+        # this will tell how straight in front the next target is
+        # target_offset_x = np.abs(curr_x - target_x)
+        # target_offset_y = np.abs(curr_y - target_y)
+        target_velocity = 12.0
+
+        if d_to_waypoint < 10.0:
+            
+            target_vel = 12.
+
+        if d_to_waypoint < 5:
+
+            target_vel = 5. # want 8 for turns, but starting simple
+
+
+
 
 
         ####################### TODO: Your TASK 2 code ends Here #######################

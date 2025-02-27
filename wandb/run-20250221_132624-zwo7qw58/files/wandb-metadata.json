@@ -1,0 +1,42 @@
+{
+  "os":  "Linux-5.4.0-205-generic-x86_64-with-glibc2.17",
+  "python":  "CPython 3.8.20",
+  "startedAt":  "2025-02-21T19:26:25.315817Z",
+  "program":  "/home/rubenjh2/Desktop/mp-release-sp25/src/mp1/eval.py",
+  "codePath":  "src/mp1/eval.py",
+  "git":  {
+    "remote":  "https://github.com/rubenjh2/MP1_ECE484",
+    "commit":  "102a1f5f20dbc398e9a9d3628a51d5f248bb5245"
+  },
+  "email":  "rubenjh2@illinois.edu",
+  "root":  "/home/rubenjh2/Desktop/mp-release-sp25",
+  "host":  "eceb-5072-15.ews.illinois.edu",
+  "executable":  "/home/rubenjh2/.conda/envs/tusimple/bin/python",
+  "codePathLocal":  "src/mp1/eval.py",
+  "cpu_count":  6,
+  "cpu_count_logical":  12,
+  "gpu":  "Quadro P2200",
+  "gpu_count":  1,
+  "disk":  {
+    "/":  {
+      "total":  "494328586240",
+      "used":  "206181957632"
+    }
+  },
+  "memory":  {
+    "total":  "16635740160"
+  },
+  "cpu":  {
+    "count":  6,
+    "countLogical":  12
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "Quadro P2200",
+      "memoryTotal":  "5368709120",
+      "cudaCores":  1280,
+      "architecture":  "Pascal"
+    }
+  ],
+  "cudaVersion":  "12.2"
+}
