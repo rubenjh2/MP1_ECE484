@@ -8,6 +8,8 @@ import math
 from util import euler_to_quaternion, quaternion_to_euler
 import time
 
+import matplotlib.pyplot as plt   # ADDED
+
 class vehicleController():
 
     def __init__(self):
@@ -15,7 +17,14 @@ class vehicleController():
         self.controlPub = rospy.Publisher("/ackermann_cmd", AckermannDrive, queue_size = 1)
         self.prev_vel = 0
         self.L = 1.75 # Wheelbase, can be get from gem_control.py
-        self.log_acceleration = False
+        self.log_acceleration = True   # CHANGE
+
+        # ADDED STUFF
+        self.accelerations = []
+        self.prev_time = 0
+        self.time_tracker = 0
+        self.time_set = []
+
 
     def getModelState(self):
         # Get the current state of the vehicle
@@ -62,49 +71,148 @@ class vehicleController():
     def longititudal_controller(self, curr_x, curr_y, curr_vel, curr_yaw, future_unreached_waypoints):
 
         ####################### TODO: Your TASK 2 code starts Here #######################
-        # target_velocity = 10
 
         # get location components of next target
-        target_x, target_y = future_unreached_waypoints[0] # consider changing this so skip one waypoint if straight
-
-        # get combined location of next target
-        target_location = np.sqrt(target_x**2 + target_y**2)
-
-        # get current position
-        curr_pos = np.sqrt(curr_x**2 + curr_y**2)
-
-        # get distance from car to next waypoint
-        d_to_waypoint = target_location - curr_pos
-
-        # this will tell how straight in front the next target is
-        # target_offset_x = np.abs(curr_x - target_x)
-        # target_offset_y = np.abs(curr_y - target_y)
-        target_velocity = 12.0
-
-        if d_to_waypoint < 10.0:
-            
-            target_vel = 12.
-
-        if d_to_waypoint < 5:
-
-            target_vel = 5. # want 8 for turns, but starting simple
+        if len(future_unreached_waypoints) > 1:
+            target_x1, target_y1 = future_unreached_waypoints[0]
+            target_x2, target_y2 = future_unreached_waypoints[1]
+        else:
+            target_x1, target_y1 = future_unreached_waypoints[0]
+            target_x2, target_y2 = target_x1, target_y1
 
 
+        # rename for simplicity
+        x1 = curr_x
+        y1 = curr_y
+        x2 = target_x1
+        y2 = target_y1
+        x3 = target_x2
+        y3 = target_y2
 
+        # compute the center of the curve's circle (x_c, y_c)
+        mid1 = ((x1 + x2) / 2, (y1 + y2) / 2)   # midpoint from 1 to 2
+        mid2 = ((x2 + x3) / 2, (y2 + y3) / 2)   # midpoint from 2 to 3
 
+        dx1, dy1 = x2 - x1, y2 - y1   # slope of 1 to 2
+        dx2, dy2 = x3 - x2, y3 - y2   # slope of 2 to 3
+
+        if dx1 == 0:  # Vertical line case
+            perp_slope1 = 0  # Perpendicular line is horizontal
+        else:
+            perp_slope1 = -dx1 / dy1 if dy1 != 0 else np.inf  # Perpendicular slope
+
+        if dx2 == 0:  # Vertical line case
+            perp_slope2 = 0
+        else:
+            perp_slope2 = -dx2 / dy2 if dy2 != 0 else np.inf
+
+        if np.isinf(perp_slope1):  # First bisector is vertical
+            x_c = mid1[0]
+            y_c = perp_slope2 * (x_c - mid2[0]) + mid2[1]
+        elif np.isinf(perp_slope2):  # Second bisector is vertical
+            x_c = mid2[0]
+            y_c = perp_slope1 * (x_c - mid1[0]) + mid1[1]
+        else:  # Normal case: Solve for intersection of the two perpendicular bisectors
+            A = np.array([[-perp_slope1, 1], [-perp_slope2, 1]])
+            b = np.array([mid1[1] - perp_slope1 * mid1[0], mid2[1] - perp_slope2 * mid2[0]])
+            x_c, y_c = np.linalg.solve(A, b)
+
+        R = np.sqrt((x1 - x_c) ** 2 + (y1 - y_c) ** 2)
+
+        kappa = 1/R
+
+        # compute target velocity with root-proportionality
+        v_max = 20   # maximum velocity in any case
+
+        slow_param = 50   # TUNE 50 works
+        velocity_curve = v_max * np.exp(-kappa * slow_param)
+
+        target_vel = np.clip(velocity_curve, 8.0, v_max)
 
         ####################### TODO: Your TASK 2 code ends Here #######################
-        return target_velocity
+        return target_vel # target_vel
 
 
     # Task 3: Lateral Controller (Pure Pursuit)
     def pure_pursuit_lateral_controller(self, curr_x, curr_y, curr_yaw, target_point, future_unreached_waypoints):
 
         ####################### TODO: Your TASK 3 code starts Here #######################
-        target_steering = 0
+                
+        # get location components of next target
+        if len(future_unreached_waypoints) > 1:
+            target_x1, target_y1 = target_point
+            target_x2, target_y2 = future_unreached_waypoints[1]
+        else:
+            target_x1, target_y1 = target_point
+            target_x2, target_y2 = target_x1, target_y1
+
+
+        # rename for simplicity
+        x1 = curr_x
+        y1 = curr_y
+        x2 = target_x1
+        y2 = target_y1
+        x3 = target_x2
+        y3 = target_y2
+
+        # compute the center of the curve's circle (x_c, y_c)
+        mid1 = ((x1 + x2) / 2, (y1 + y2) / 2)   # midpoint from 1 to 2
+        mid2 = ((x2 + x3) / 2, (y2 + y3) / 2)   # midpoint from 2 to 3
+
+        dx1, dy1 = x2 - x1, y2 - y1   # slope of 1 to 2
+        dx2, dy2 = x3 - x2, y3 - y2   # slope of 2 to 3
+
+        if dx1 == 0:  # Vertical line case
+            perp_slope1 = 0  # Perpendicular line is horizontal
+        else:
+            perp_slope1 = -dx1 / dy1 if dy1 != 0 else np.inf  # Perpendicular slope
+
+        if dx2 == 0:  # Vertical line case
+            perp_slope2 = 0
+        else:
+            perp_slope2 = -dx2 / dy2 if dy2 != 0 else np.inf
+
+        if np.isinf(perp_slope1):  # First bisector is vertical
+            x_c = mid1[0]
+            y_c = perp_slope2 * (x_c - mid2[0]) + mid2[1]
+        elif np.isinf(perp_slope2):  # Second bisector is vertical
+            x_c = mid2[0]
+            y_c = perp_slope1 * (x_c - mid1[0]) + mid1[1]
+        else:  # Normal case: Solve for intersection of the two perpendicular bisectors
+            A = np.array([[-perp_slope1, 1], [-perp_slope2, 1]])
+            b = np.array([mid1[1] - perp_slope1 * mid1[0], mid2[1] - perp_slope2 * mid2[0]])
+            x_c, y_c = np.linalg.solve(A, b)
+
+        R = np.sqrt((x1 - x_c) ** 2 + (y1 - y_c) ** 2)
+
+        sign_theta = np.sign((x2 - x1)*(y3 - y2) - (y2 - y1)*(x3 - x2))
+
+        ld = 10   # m --- TUNE THIS
+        theta = sign_theta * ld / R   # arc angle using arc length formula --- rads
+
+        # compute alpha
+        circ_to_car_x = (x1 - x_c)
+        circ_to_car_y = (y1 - y_c)
+        
+        x_ld = circ_to_car_x * np.cos(theta) - circ_to_car_y * np.sin(theta)
+        y_ld = circ_to_car_x * np.sin(theta) + circ_to_car_y * np.cos(theta)
+
+        x_ld_world = x_ld + x_c
+        y_ld_world = y_ld + y_c
+
+        heading_des_x = x_ld_world - x1
+        heading_des_y = y_ld_world - y1
+
+        heading_world = np.arctan2(heading_des_y, heading_des_x)
+
+        alpha = heading_world - curr_yaw
+
+        # compute steering angle (delta)
+        delta = np.arctan2(2*self.L*np.sin(alpha), ld)
+        
 
         ####################### TODO: Your TASK 3 code starts Here #######################
-        return target_steering
+        return delta
 
 
     def execute(self, currentPose, target_point, future_unreached_waypoints):
@@ -122,11 +230,17 @@ class vehicleController():
         if self.log_acceleration:
             acceleration = (curr_vel- self.prev_vel) * 100 # Since we are running in 100Hz
 
-
-
         target_velocity = self.longititudal_controller(curr_x, curr_y, curr_vel, curr_yaw, future_unreached_waypoints)
         target_steering = self.pure_pursuit_lateral_controller(curr_x, curr_y, curr_yaw, target_point, future_unreached_waypoints)
 
+        # Acceleration and Time Tracking (ADDED)
+        self.accelerations.append(acceleration)
+
+        curr_time = (rospy.Time.now()).to_sec()
+        dt = curr_time - self.prev_time
+        self.time_tracker += dt
+        self.time_set.append(self.time_tracker)
+        self.prev_time = curr_time
 
         #Pack computed velocity and steering angle into Ackermann command
         newAckermannCmd = AckermannDrive()
@@ -136,7 +250,20 @@ class vehicleController():
         # Publish the computed control input to vehicle model
         self.controlPub.publish(newAckermannCmd)
 
+        self.prev_vel = curr_vel
+
     def stop(self):
         newAckermannCmd = AckermannDrive()
         newAckermannCmd.speed = 0
         self.controlPub.publish(newAckermannCmd)
+
+
+        # Plot code (ADDED)
+        plt.figure(figsize=(8, 5))
+        plt.plot(self.time_set, self.accelerations, marker="o", linestyle="-", linewidth=2, label="Acceleration")
+        plt.xlabel("Time (s)")
+        plt.ylabel("Acceleration (m/s²)")
+        plt.title("Acceleration vs. Time")
+        plt.legend()
+        plt.grid(True)
+        plt.savefig("accel_plot.png")
